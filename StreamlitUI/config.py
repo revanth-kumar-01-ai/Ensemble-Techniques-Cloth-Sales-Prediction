@@ -1,0 +1,1 @@
+PROJECT_NAME = 'Ensemble cloth Sales prediction'
