@@ -1,15 +1,16 @@
-pandas
-mlflow==2.2.2
-numpy
-scikit-learn
-matplotlib
-python-box==6.0.2
-PyYAML
-pyarrow==14.0.0
-tqdm
-joblib
 Flask
 Flask-Cors
+joblib
+matplotlib
+mlflow
+numpy
+pandas
+pyarrow
+PyYAML
+python-box
+scikit-learn
 streamlit
+tqdm
+types-PyYAML
 
-# -e .
+-e .
