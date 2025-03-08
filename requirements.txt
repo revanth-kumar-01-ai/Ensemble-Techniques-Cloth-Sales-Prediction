@@ -5,6 +5,7 @@ scikit-learn
 matplotlib
 python-box==6.0.2
 PyYAML
+pyarrow==14.0.0
 tqdm
 joblib
 Flask
