@@ -29,3 +29,9 @@ model_trainer:
   test_data_path: artifacts/data_splitting/test.csv
   model: artifacts/model_trainer/finialModel.joblib
   streamLitModel: StreamlitUI/models/finialModel.joblib
+
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  test_data_path: artifacts/data_splitting/test.csv
+  model: artifacts/model_trainer/finialModel.joblib
+  metric_file_name: artifacts/model_evaluation

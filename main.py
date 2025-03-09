@@ -4,6 +4,7 @@ from Ensemble_cloth_Sales_prediction.pipeline.stage_02_data_preprocessing import
 from Ensemble_cloth_Sales_prediction.pipeline.stage_03_data_validation import DataValidationTrainingPipeLine
 from Ensemble_cloth_Sales_prediction.pipeline.stage_04_data_splitting import DataSplittingTrainingPipeLine
 from Ensemble_cloth_Sales_prediction.pipeline.stage_05_model_trainer import ModelTrainingPipeLine
+from Ensemble_cloth_Sales_prediction.pipeline.stage_06_model_evaluation import ModelEvalPipeLine
 
 """
 Data ingestion from the mySQL database 💉  
@@ -70,6 +71,20 @@ STAGE_NAME = "Model training Stage"
 try:
    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
    data_validation = ModelTrainingPipeLine()
+   data_validation.main()
+   logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+        logger.exception(e)
+        raise e
+
+
+""" Model Evaluation Stage 🏃🏿‍♂️"""
+
+STAGE_NAME = "Model Evaluation Stage"
+
+try:
+   logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+   data_validation = ModelEvalPipeLine()
    data_validation.main()
    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
 except Exception as e:

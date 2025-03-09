@@ -3,7 +3,7 @@ import warnings
 
 from Ensemble_cloth_Sales_prediction.constants import * 
 from Ensemble_cloth_Sales_prediction.utils.common import read_yaml, create_directories
-from Ensemble_cloth_Sales_prediction.entity.config_entity import (DataIngestionConfig, DataPreprocessingConfig, DataValidationConfig, DataSplittingConfig, ModelTrainerConfig)
+from Ensemble_cloth_Sales_prediction.entity.config_entity import (DataIngestionConfig, DataPreprocessingConfig, DataValidationConfig, DataSplittingConfig, ModelTrainerConfig, ModelEvaluationConfig)
 
 # warnings ignore 
 warnings.filterwarnings('ignore')
@@ -120,6 +120,34 @@ class ConfigurationManager:
 
         return model_trainer_config
     
+    # Evaluation 
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        config = self.config.model_evaluation
+        DFParams = self.params.DecisionTree
+        RFParams = self.params.RandomForest
+        LGParams = self.params.LogisticRegression
+        KNNParams = self.params.KNeighbors
+
+        schema =  self.schema.TARGET_COLUMN
+
+        create_directories([config.root_dir])
+
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir=config.root_dir,
+            test_data_path=config.test_data_path,
+            model = config.model,
+            DFParams = DFParams,
+            RFParams = RFParams,
+            LGParams = LGParams, 
+            KNNParams = KNNParams,
+            metric_file_name = config.metric_file_name,
+            target_column = schema.name,
+            mlflow_uri="https://dagshub.com/revanth-kumar-01-ai/Ensemble-Techniques-Cloth-Sales-Prediction.mlflow",
+           
+        )
+
+        return model_evaluation_config
+
 
 
 
