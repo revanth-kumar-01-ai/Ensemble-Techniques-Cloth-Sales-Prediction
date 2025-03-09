@@ -3,7 +3,7 @@ import warnings
 
 from Ensemble_cloth_Sales_prediction.constants import * 
 from Ensemble_cloth_Sales_prediction.utils.common import read_yaml, create_directories
-from Ensemble_cloth_Sales_prediction.entity.config_entity import (DataIngestionConfig, DataPreprocessingConfig, DataValidationConfig)
+from Ensemble_cloth_Sales_prediction.entity.config_entity import (DataIngestionConfig, DataPreprocessingConfig, DataValidationConfig, DataSplittingConfig)
 
 # warnings ignore 
 warnings.filterwarnings('ignore')
@@ -72,3 +72,19 @@ class ConfigurationManager:
         )
 
         return data_validation_config
+    
+    # Data Splitting  
+    def get_data_splitting_config(self) -> DataSplittingConfig:
+        
+        config = self.config.data_splitting
+
+        create_directories([config.root_dir])
+
+        data_splitting_config = DataSplittingConfig(
+            root_dir=config.root_dir, 
+            cleanData=config.cleanData,
+            testData=config.testData, 
+            trainData=config.trainData
+        )
+
+        return data_splitting_config

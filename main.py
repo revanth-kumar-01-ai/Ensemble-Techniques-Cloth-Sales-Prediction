@@ -2,6 +2,7 @@ from Ensemble_cloth_Sales_prediction import logger
 from Ensemble_cloth_Sales_prediction.pipeline.stage_01_data_injection import DataIngestionTrainingPipeLine
 from Ensemble_cloth_Sales_prediction.pipeline.stage_02_data_preprocessing import DataPreprocessingTrainingPipeLine
 from Ensemble_cloth_Sales_prediction.pipeline.stage_03_data_validation import DataValidationTrainingPipeLine
+from Ensemble_cloth_Sales_prediction.pipeline.stage_04_data_splitting import DataSplittingTrainingPipeLine
 
 
 """
@@ -42,6 +43,20 @@ STAGE_NAME = "Data Validation Stage"
 try:
    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
    data_validation = DataValidationTrainingPipeLine()
+   data_validation.main()
+   logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+        logger.exception(e)
+        raise e
+
+
+""" Dataset splitting train and test 🪓"""
+
+STAGE_NAME = "Data splitting Stage"
+
+try:
+   logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+   data_validation = DataSplittingTrainingPipeLine()
    data_validation.main()
    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
 except Exception as e:
