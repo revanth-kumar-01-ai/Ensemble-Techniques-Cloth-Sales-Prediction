@@ -1,1 +1,18 @@
-params: values
+RandomForest:
+  max_depth: 10
+  min_samples_leaf: 10
+  min_samples_split: 20
+  n_estimators: 500
+
+DecisionTree:
+  max_depth: 10
+  min_samples_leaf: 4
+  min_samples_split: 10
+
+LogisticRegression:
+  C: 100
+  solver: 'liblinear'
+
+KNeighbors:
+  metric: 'euclidean'
+  n_neighbors: 3

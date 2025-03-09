@@ -31,3 +31,26 @@ class DataSplittingConfig:
     cleanData: Path
     trainData: Path
     testData: Path
+
+# model trainer 
+@dataclass(frozen=True)
+class ModelTrainerConfig:
+    root_dir: Path
+    train_data_path: Path
+    test_data_path: Path
+    model: Path
+
+    # Decision tree 
+    DTParams: dict
+
+    # Random Forest 
+    RFParams: dict
+
+    # logistic regression params 
+    LGParams: dict
+
+    # Knn 
+    KNNParams: dict
+
+    # Target column
+    target_column: str
