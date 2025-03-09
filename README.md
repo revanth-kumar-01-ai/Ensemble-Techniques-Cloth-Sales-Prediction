@@ -54,3 +54,20 @@ The dataset is provided by a **trusted institute** 🏛️ and contains:
 - **US** 🇺🇸 – Customer in the US
 
 
+# 📊 Accuracy  
+
+These are the **Ensemble Learning** model accuracies for the **Clothing Sales Prediction** project. Based on the results, **🔥 Stacking is the preferred choice** as it has **low bias and variance**. ✅  
+
+### 📌 Model Performance Comparison  
+
+| 🚀 **Ensemble Method**                      | 🎯 **Train Accuracy** | 📈 **Test Accuracy** |
+|--------------------------------------------|----------------------|----------------------|
+| 🗳️ **Voting**                              | 0.8833               | 0.9179               |
+| 🏗️ **Stacking**                            | 0.8917               | 0.9071               |
+| 🎭 **Bagging (AdaBoost + RF as Estimators)** | 0.8583               | 0.9750               |
+| 🌱 **Bagging (Gradient Boosting)**          | 0.8500               | 0.9857               |
+| 🚀 **Bagging (XGBoost Classifier)**         | 0.8500               | 0.9536               |
+
+📌 **Conclusion:** Among all the ensemble methods tested, **Stacking** is chosen as the best model due to its **balanced bias-variance tradeoff**. 🏆🎯  
+
+Let me know if you need further improvements! 😊🚀
