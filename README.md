@@ -75,3 +75,9 @@ These are the **Ensemble Learning** model accuracies for the **Clothing Sales Pr
 ## 🔗 MLflow Link  
 
 [Ensemble Techniques - Cloth Sales Prediction](https://dagshub.com/revanth-kumar-01-ai/Ensemble-Techniques-Cloth-Sales-Prediction.mlflow) 🚀
+
+
+## 🚀 Streamlit App  
+
+🔗 [Ensemble Techniques - Cloth Sales Prediction](https://ensemble-techniques-cloth-sales-prediction-ba49kfhpnjfesfsy7pf.streamlit.app/) 🌟  
+
