@@ -106,7 +106,8 @@ class ConfigurationManager:
             train_data_path = config.train_data_path,
             test_data_path = config.test_data_path, 
             model = config.model,
-
+            streamLitModel = config.streamLitModel,
+            
             # params 
             DTParams = DecisionTreeParams, 
             RFParams = RandomForestParams, 

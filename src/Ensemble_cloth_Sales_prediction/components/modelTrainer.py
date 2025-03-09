@@ -88,3 +88,4 @@ class ModelTrainer:
 
         # save model
         joblib.dump(stackModel, self.config.model)
+        joblib.dump(stackModel, self.config.streamLitModel)

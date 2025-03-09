@@ -28,3 +28,4 @@ model_trainer:
   train_data_path: artifacts/data_splitting/train.csv
   test_data_path: artifacts/data_splitting/test.csv
   model: artifacts/model_trainer/finialModel.joblib
+  streamLitModel: StreamlitUI/models/finialModel.joblib
