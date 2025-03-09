@@ -1,1 +1,16 @@
-schema: values
+COLUMNS: 
+  CompPrice : int64
+  Income : int64
+  Advertising : int64
+  Population : int64
+  Price : int64
+  Age : int64
+  Education : int64
+  ShelveLoc_Good : int64
+  ShelveLoc_Medium : int64
+  Urban_Yes : int64
+  US_Yes : int64
+  target : int64
+
+TARGET_COLUMN:
+  name: target

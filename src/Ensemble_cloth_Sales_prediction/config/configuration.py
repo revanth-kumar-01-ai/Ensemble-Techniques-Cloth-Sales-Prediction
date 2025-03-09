@@ -3,7 +3,7 @@ import warnings
 
 from Ensemble_cloth_Sales_prediction.constants import * 
 from Ensemble_cloth_Sales_prediction.utils.common import read_yaml, create_directories
-from Ensemble_cloth_Sales_prediction.entity.config_entity import (DataIngestionConfig, DataPreprocessingConfig)
+from Ensemble_cloth_Sales_prediction.entity.config_entity import (DataIngestionConfig, DataPreprocessingConfig, DataValidationConfig)
 
 # warnings ignore 
 warnings.filterwarnings('ignore')
@@ -54,3 +54,21 @@ class ConfigurationManager:
         )
 
         return data_preprocess_config
+    
+    # Data Validation 
+    def get_data_validation_config(self) -> DataValidationConfig:
+        config = self.config.data_validation
+        schema = self.schema.COLUMNS
+
+
+        create_directories([config.root_dir])
+
+
+        data_validation_config = DataValidationConfig(
+            root_dir=config.root_dir,
+            STATUS_FILE=config.STATUS_FILE,
+            cleanDataset = config.cleanDataset,
+            all_schema=schema,
+        )
+
+        return data_validation_config

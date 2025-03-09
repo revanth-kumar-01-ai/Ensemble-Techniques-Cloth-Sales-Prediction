@@ -10,3 +10,10 @@ data_preprocessing:
   clothSalesDataset: artifacts/data_ingestion/clothesDataset.csv
   load_data: artifacts/data_preprocessing/cleanDataset.csv
   preprocessModel: artifacts/data_preprocessing/preprocess.joblib
+
+
+data_validation:
+  root_dir: artifacts/data_validation
+  cleanDataset: artifacts/data_preprocessing/cleanDataset.csv
+  STATUS_FILE: artifacts/data_validation/status.txt
+
