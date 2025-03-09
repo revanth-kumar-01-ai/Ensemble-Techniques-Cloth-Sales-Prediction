@@ -21,31 +21,51 @@ st.markdown(
 )
 
 # Workflow Steps
-st.subheader("🚀 WorkFlow")
-workflow_steps = [
-    "Update 🛠️ config.yaml", "Update 📜 schema.yaml", "Update ⚙️ params.yaml",
-    "Update 🏗️ the entity", "Update 📝 the configuration manager in src/config",
-    "Update 🧩 the components", "Update 🔄 the pipeline", "Update 🚀 main.py",
-    "Update 🌐 app.py"
-]
-st.write("\n".join([f"✅ {step}" for step in workflow_steps]))
-
-# CRISP Methodology
-st.subheader("📌 CRISP Methodology")
-crisp_steps = [
-    "✅ Business & Data Understanding 📊🔍", "✅ Data Preparation 🧹📂",
-    "✅ Model Building 🤖⚙️", "✅ Model Evaluation 📈✅",
-    "✅ Model Deployment 🚀💻", "✅ Maintenance & Monitoring 🛠️👀"
-]
-st.write("\n".join(crisp_steps))
-
-# Business Understanding
-st.subheader("📂 Business & Data Understanding")
 st.markdown(
     """
-    **Problem Statement:**  
-    A **cloth manufacturing company** 🏭 wants to identify key factors that contribute to **high sales** 📈.  
-    The goal is to build **Decision Tree 🌳 and Random Forest 🌲 models**, with Sales as the target variable.
+    ## 🚀 WorkFlow  
+    1️⃣ **Update** 🛠️ `config.yaml`  
+    2️⃣ **Update** 📜 `schema.yaml`  
+    3️⃣ **Update** ⚙️ `params.yaml`  
+    4️⃣ **Update** 🏗️ **the entity**  
+    5️⃣ **Update** 📝 **the configuration manager in `src/config`**  
+    6️⃣ **Update** 🧩 **the components**  
+    7️⃣ **Update** 🔄 **the pipeline**  
+    8️⃣ **Update** 🚀 `main.py`  
+    9️⃣ **Update** 🌐 `app.py`  
+"""
+)
+
+# CRISP Methodology
+st.markdown(
+    """
+        ## 📌 **CRISP Methodology**  
+    ✅ **Business & Data Understanding** 📊🔍  
+    ✅ **Data Preparation** 🧹📂  
+    ✅ **Model Building** 🤖⚙️  
+    ✅ **Model Evaluation** 📈✅  
+    ✅ **Model Deployment** 🚀💻  
+    ✅ **Maintenance & Monitoring** 🛠️👀  
+    """
+)
+
+# Business Understanding
+st.markdown(
+
+    """
+        ## 📂 **Business & Data Understanding**  
+
+    ### 📌 **Problem Statement**  
+    A **cloth manufacturing company** 🏭 wants to identify key attributes that contribute to **high sales** 📈. The goal is to build **Decision Tree** 🌳 and **Random Forest** 🌲 models, with **Sales** as the **target variable**, which must first be **converted into a categorical variable** 🎯.  
+
+    ### 🎯 **Business Objectives & Constraints**  
+    ✅ **Business Objective:** Maximize profits 💰  
+    ✅ **Business Constraint:** Minimize the time required to identify key attributes ⏳  
+
+    ### 📊 **Success Criteria**  
+    - **📈 Business Success Criteria:** Increase sales by **20%**  
+    - **🤖 ML Success Criteria:** Achieve an accuracy of over **80%**  
+    - **💰 Economic Success Criteria:** Ensure business profits exceed **$3,000 USD**  
     """
 )
 
