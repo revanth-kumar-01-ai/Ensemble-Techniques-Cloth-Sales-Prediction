@@ -3,7 +3,7 @@ import warnings
 
 from Ensemble_cloth_Sales_prediction.constants import * 
 from Ensemble_cloth_Sales_prediction.utils.common import read_yaml, create_directories
-from Ensemble_cloth_Sales_prediction.entity.config_entity import (DataIngestionConfig)
+from Ensemble_cloth_Sales_prediction.entity.config_entity import (DataIngestionConfig, DataPreprocessingConfig)
 
 # warnings ignore 
 warnings.filterwarnings('ignore')
@@ -39,3 +39,18 @@ class ConfigurationManager:
 
 
         return data_ingestion_config
+    
+    # data preprocessing 
+    def get_data_preprocessing_config(self) -> DataPreprocessingConfig:
+        config = self.config.data_preprocessing
+
+        create_directories([config.root_dir])
+
+        data_preprocess_config = DataPreprocessingConfig(
+            root_dir=config.root_dir,
+            clothSalesDataset=config.clothSalesDataset,
+            load_data=config.load_data,
+            preprocessModel=config.preprocessModel
+        )
+
+        return data_preprocess_config
